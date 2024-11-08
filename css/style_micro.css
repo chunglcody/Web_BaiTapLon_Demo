@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 10px 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col :hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 25px;
+}
+
+.col:hover {
+    transform: translateY(-5px);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.txt-daichi {
+    margin-left: 50px;
+    padding-left: 50px;
+    border-left: 1px solid rgb(97, 97, 97);
+}
+
+.txt-daichi h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #F68A1E;
+}
+
+.search-bar {
+    margin-left: 100px;
+}
+
+.search-bar input {
+    width: 350px;
+    height: 35px;
+    padding-left: 20px;
+    background: url('../img/magnifying-glass.png') no-repeat right 10px center;
+    background-size: 20px 20px;
+    border: 1px solid #ccc;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #1ea7f6;
+    border-color: #1ea7f6;
+}
+
+.giohang,
+.user {
+    margin-left: 50px;
+}
+
+.giohang img,
+.user img {
+    width: 30px;
+    height: 30px;
+}
+
+.giohang:hover,
+.user:hover {
+    box-shadow: 0 0 10px #1ea7f6;
+}
+
+nav {
+    background-color: #434343;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 100px;
+    /* Adjust to leave space below navbar */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 15px;
+}
+
+nav ul li {
+    width: 260px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-bottom: 1px solid #ffffff;
+    transition: background-color 0.3s;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+nav ul li a:hover {
+    color: aliceblue;
+    background-color: rgb(118, 118, 118);
+}
+
+.nav-item .dropdown-menu {
+    display: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    /* Đảm bảo menu xuất hiện ngay bên dưới */
+}
+
+.logo_thuonghieu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sanpham {
+    margin-top: 50px;
+}
+
+.dathang {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.dathang a {
+    text-decoration: none;
+}
+.cart-count {
+    position: absolute;
+    top: 15px;
+    right: 360px;
+    background-color: rgb(255, 145, 0);
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.title-micro {
+    display: block;
+    border-bottom: 1px solid #cb0036;
+}
+
+.micro h2 {
+    margin: 0;
+    width: 160px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #cb0036;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.micro-product img {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    filter: drop-shadow(0 8px 7px rgba(0, 0, 0, 0.428));
+}
+
+.micro-product h5 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.micro-product h6 {
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.micro-product p {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: black;
+}
+
+.micro-product h3 {
+    font-size: 25px;
+    color: #cb0036;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.tragop-micro {
+    width: 120px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #cb0036;
+    border-radius: 5px;
+}
+
+.tragop-micro a {
+    margin: 0 auto;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cb0036;
+    font-weight: normal;
+}
+
+.tragop-micro a:hover {
+    box-shadow: 0 0 10px #cb0036;
+}
+
+.mua-micro {
+    width: 120px;
+    height: 30px;
+    background-color: #cb0036;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.mua-micro a {
+    font-size: 18px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.mua-micro a:hover {
+    box-shadow: 0 0 10px #cb0036;
+}
+
+.map-link a:hover {
+    box-shadow: 1px 1px 5px #F68A1E;
+}
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+    left: 0;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+}
+
+.footer-content input {
+    width: 100%;
+    height: 35px;
+    border-radius: 0;
+}
+
+.footer-content label {
+    margin-top: 10px;
+}
+
+.footer-content {
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content button {
+    width: 150px;
+    height: 35px;
+    background-color: #a7a7a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}

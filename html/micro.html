@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody Studio - Microphone</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style_micro.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        function sortProducts(order) {
+            const productsContainer = document.querySelector('.row-cols-md-4');
+            const products = Array.from(productsContainer.getElementsByClassName('col'));
+
+            products.sort((a, b) => {
+                const priceA = parseInt(a.querySelector('h3').textContent.replace(/[^0-9]/g, ''));
+                const priceB = parseInt(b.querySelector('h3').textContent.replace(/[^0-9]/g, ''));
+                return order === 'asc' ? priceA - priceB : priceB - priceA;
+            });
+
+            products.forEach(product => productsContainer.appendChild(product));
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-content">
+                <div class="logo">
+                    <a href="../html/home.html"><img src="../img/logo_black.png" style="width: 162px;" alt="Logo"></a>
+                </div>
+                <div class="txt-daichi">
+                    <h4>ĐỊA CHỈ</h4>
+                    <span>12, NGUYỄN VĂN BẢO, GÒ VẤP, TP. HỒ CHÍ MINH</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm">
+                </div>
+                <div class="giohang">
+                    <a href="../html/price.html">
+                        <img src="../img/shopping-cart.png" alt="Cart">
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <!-- Toggle button for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-12"></div>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #434343;">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a style="background-color: white; height: 50px; display: flex; align-items: center;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                            <img src="../img/menu.png" style="width: 20px; margin-right: 10px;" alt="">
+                            <h2 style="font-size: 16px; font-weight: bold; margin-top: 10px;">DANH MỤC SẢN PHẨM</h2>
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #434343;">
+                            <li>
+                                <a class="nav-item" href="../html/loa.html"><img src="../img/speaker.png" style="width: 15px; margin-right: 5px;" alt=""> Loa</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/tainghe.html"><img src="../img/headphones.png" style="width: 15px; margin-right: 5px;" alt=""> Tai nghe</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/micro.html"><img src="../img/microphone.png" style="width: 15px; margin-right: 5px;" alt=""> Microphone</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/karaoke.html"><img src="../img/karaoke.png" style="width: 15px; margin-right: 5px;" alt=""> Thiết bị Karaoke</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/soundcard.html"><img src="../img/sound-card.png" style="width: 15px; margin-right: 5px;" alt=""> Sound Card</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/jack.html"><img src="../img/audio-jack.png" style="width: 15px; margin-right: 5px;" alt=""> Dây dẫn, Phụ kiện</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <a href=""><img src="../img/JBL1.png" style="width: 90%; margin-top: 8px;" alt=""></a>
+                    <a href=""> <img src="../img/AKG.png" style="width: 90%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Shure.png" style=" margin-left: 25px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Denon.png" style=" margin-left: 25px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Sumico_1.png" style=" margin-left: 25px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Sine.png" style=" margin-left: 25px;width: 80%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/EZAcoustic (1).png" style=" margin-left: 25px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/dbx1.png" style=" margin-left: 20px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/musican-b.png" style=" margin-left: 25px;width: 80%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Klipsch.png" style=" margin-left: 25px;width: 80%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Nativ.png" style=" margin-left: 25px;width: 80%; margin-top: 8px;" alt=""></a>
+
+                </ul>
+
+            </div>
+
+
+        </nav>
+
+        <div style="margin-top: 160px; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: flex-start; align-items: center; padding: 10px;">
+            <div style=" display: flex; align-items: center; justify-content: flex-start;">
+                <div class="map-link">
+                    <a href="../html/home.html" style="width: 120px; height: 35px; border-radius: 10px; border: 1px solid #F68A1E; display: flex; justify-content: center; align-items: center; text-decoration: none; color: black; transition: background-color 0.3s, color 0.3s;">
+                        <img src="../img/home.png" style="width: 20px; margin-right: 5px;" alt="">
+                        <span>Trang chủ</span>
+                    </a>
+                </div>
+
+                <div style="margin: 0 10px;">></div>
+                <div class="name-sp">
+                    Microphone
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-start" style="margin-top: 30px;">
+
+            <div class="txt-filter d-flex flex-column align-items-end" style="gap: 10px; width: 300px; padding: 20px; border: 1px solid #cb0036; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <div class="d-flex align-items-center" style="width: 100%;">
+
+                    <img src="../img/settings-sliders.png" style="width: 20px; margin-right: 5px;" alt="">
+                    <p style="margin: 0; font-weight: bold;">Sắp xếp theo:</p>
+                </div>
+                <div class="d-flex justify-content-between" style="width: 100%; margin-top: 5px;">
+                    <button onclick="sortProducts('asc')" class="btn btn-sm mx-1" style="background-color: white; background-color: #cb0036; color: rgb(255, 255, 255); width: 120px; ">
+                        Giá tăng dần
+                    </button>
+                    <button onclick="sortProducts('desc')" class="btn btn-sm mx-1" style="background-color: white; background-color: #cb0036; color: rgb(255, 255, 255); width: 120px;">
+                        Giá giảm dần
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="sanpham ">
+            <div class="col-12 mt-5">
+                <div class="micro" id="micro">
+                    <div class="title-micro">
+                        <h2>MICROPHONE</h2>
+                    </div>
+                    <div class="micro-product">
+                        <div class="row mt-3 row-cols-1 row-cols-md-4 g-4">
+                            <div class="col">
+                                <a class="the-link" href="../html/micro1.html " style=" text-decoration: none; ">
+                                    <div class="card h-100 " style="border-radius: 25px; filter: drop-shadow(0 1px 5px rgba(153, 0, 255, 0.243)); ">
+                                        <img src="../img/micbm900.png" class="card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title ">MICROPHONE BM900</h5>
+                                            <h6 class="card-text ">Microphone BM900</h6>
+                                            <hr style="width: 70%; align-items: center; margin: 0 auto; ">
+                                            <p>Gía Bán</p>
+                                            <h3>140.000 Đ</h3>
+                                            <div class="dathang">
+                                                <div class="tragop-micro">
+                                                    <a href="../html/micro1.html">Trả góp</a>
+
+                                                </div>
+                                                <div class="mua-micro">
+                                                    <a href="../html/micro1.html">Mua Ngay</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col">
+                                <a class="the-link" href="../html/micro2.html " style=" text-decoration: none; ">
+                                    <div class="card h-100 " style="border-radius: 25px; filter: drop-shadow(0 1px 5px rgba(153, 0, 255, 0.243)); ">
+                                        <img src="../img/at2020.png " class="card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title ">MICROPHONE AT2020</h5>
+                                            <h6 class="card-text ">Condenser Audio Technica AT2020</h6>
+                                            <hr style="width: 70%; align-items: center; margin: 0 auto; ">
+                                            <p>Gía Bán</p>
+                                            <h3>2.700.000 Đ</h3>
+                                            <div class="dathang">
+                                                <div class="tragop-micro">
+                                                    <a href="../html/micro2.html">Trả góp</a>
+
+                                                </div>
+                                                <div class="mua-micro">
+                                                    <a href="../html/micro2.html">Mua Ngay</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col">
+                                <a class="the-link" href="../html/micro3.html" style=" text-decoration: none; ">
+                                    <div class="card h-100 " style="border-radius: 25px; filter: drop-shadow(0 1px 5px rgba(153, 0, 255, 0.243)); ">
+                                        <img src="../img/Shure SM58.png " class="card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title ">MICROPHONE SHURE SM58</h5>
+                                            <h6 class="card-text ">Shure SM58-LC</h6>
+                                            <hr style="width: 70%; align-items: center; margin: 0 auto; ">
+                                            <p>Gía Bán</p>
+                                            <h3>3.870.000 Đ</h3>
+                                            <div class="dathang">
+                                                <div class="tragop-micro">
+                                                    <a href="../html/micro3.html">Trả góp</a>
+
+                                                </div>
+                                                <div class="mua-micro">
+                                                    <a href="../html/micro3.html">Mua Ngay</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col">
+                                <a class="the-link" href="../html/micro4.html" style=" text-decoration: none; ">
+                                    <div class="card h-100 " style="border-radius: 25px; filter: drop-shadow(0 1px 5px rgba(153, 0, 255, 0.243)); ">
+                                        <img src="../img/Rode NT-USB Mini.png " class="card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title ">MICROPHONE RODE NT-USB</h5>
+                                            <h6 class="card-text ">Rode NT-USB Mini</h6>
+                                            <hr style="width: 70%; align-items: center; margin: 0 auto; ">
+                                            <p>Gía Bán</p>
+                                            <h3>3.050.000 Đ</h3>
+                                            <div class="dathang">
+                                                <div class="tragop-micro">
+                                                    <a href="../html/micro4.html">Trả góp</a>
+
+                                                </div>
+                                                <div class="mua-micro">
+                                                    <a href="../html/micro4.html">Mua Ngay</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col">
+                                <a class="the-link" href="../html/micro5.html " style=" text-decoration: none; ">
+                                    <div class="card h-100 " style="border-radius: 25px; filter: drop-shadow(0 1px 5px rgba(153, 0, 255, 0.243)); ">
+                                        <img src="../img/Shure SM7B.png " class="card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title ">MICROPHONE SHURE SM7B</h5>
+                                            <h6 class="card-text "> Dynamic Shure SM7B</h6>
+                                            <hr style="width: 70%; align-items: center; margin: 0 auto; ">
+                                            <p>Gía Bán</p>
+                                            <h3>13.900.000 Đ</h3>
+                                            <div class="dathang">
+                                                <div class="tragop-micro">
+                                                    <a href="../html/micro5.html">Trả góp</a>
+
+                                                </div>
+                                                <div class="mua-micro">
+                                                    <a href="../html/micro5.html">Mua Ngay</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col">
+                                <a class="the-link" href="../html/micro6.html" style=" text-decoration: none; ">
+                                    <div class="card h-100 " style="border-radius: 25px; filter: drop-shadow(0 1px 5px rgba(153, 0, 255, 0.243)); ">
+                                        <img src="../img/Samson Go Mic.png" class="card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title ">MICROPHONE USB SAMSON</h5>
+                                            <h6 class="card-text ">USB Samson Go Mic</h6>
+                                            <hr style="width: 70%; align-items: center; margin: 0 auto; ">
+                                            <p>Gía Bán</p>
+                                            <h3>1.390.000 Đ</h3>
+                                            <div class="dathang">
+                                                <div class="tragop-micro">
+                                                    <a href="../html/micro6.html">Trả góp</a>
+
+                                                </div>
+                                                <div class="mua-micro">
+                                                    <a href="../html/micro6.html">Mua Ngay</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col">
+                                <a class="the-link" href="../html/micro7.html" style=" text-decoration: none; ">
+                                    <div class="card h-100 " style="border-radius: 25px; filter: drop-shadow(0 1px 5px rgba(153, 0, 255, 0.243)); ">
+                                        <img src="../img/ATR2500x-USB.png " class="card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title ">MICROPHONE ATR2500x-USB</h5>
+                                            <h6 class="card-text ">Audio Technica ATR2500x-USB</h6>
+                                            <hr style="width: 70%; align-items: center; margin: 0 auto; ">
+                                            <p>Gía Bán</p>
+                                            <h3>3.190.000 Đ</h3>
+                                            <div class="dathang">
+                                                <div class="tragop-micro">
+                                                    <a href="../html/micro7.html">Trả góp</a>
+
+                                                </div>
+                                                <div class="mua-micro">
+                                                    <a href="../html/micro7.html">Mua Ngay</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="col">
+                                <a class="the-link" href="../html/micro8.html " style=" text-decoration: none; ">
+                                    <div class="card h-100 " style="border-radius: 25px; filter: drop-shadow(0 1px 5px rgba(153, 0, 255, 0.243)); ">
+                                        <img src="../img/Warm Audio WA-47.png " class="card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title ">MICROPHONE WARM AUDIO</h5>
+                                            <h6 class="card-text ">Condenser Warm Audio WA-47</h6>
+                                            <hr style="width: 70%; align-items: center; margin: 0 auto; ">
+                                            <p>Gía Bán</p>
+                                            <h3>24.100.000 Đ</h3>
+                                            <div class="dathang">
+                                                <div class="tragop-micro">
+                                                    <a href="../html/micro8.html">Trả góp</a>
+
+                                                </div>
+                                                <div class="mua-micro">
+                                                    <a href="../html/micro8.html">Mua Ngay</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="col-12 d-flex justify-content-center" style="background-color: #F68A1E;">
+
+                        <div class="col-4">
+                            <div class="mb-4">
+                                <label for="" class="form-label">Nhận thông tin khuyến mãi mới nhất</label>
+                                <div class="d-flex">
+                                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nhập email của bạn" />
+                                    <button type="submit" class="btn">
+                                    Đăng Ký
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center" style="background-color: #000000;">
+                        <div class="col-8 d-flex justify-content-between">
+                            <div class="col-4">
+                                <div class="logo-footer">
+                                    <img src="../img/logo_white.png" style="width: 40%; float: left;" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-4 mt-4 ml-auto">
+                                <ul class="d-flex justify-content-end">
+                                    <li>
+                                        <a href="#facebook"><img src="../img/communication.png" style="width: 40px;" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#tiktok"><img src="../img/tik-tok.png" style="width: 40px; margin-left: 10px;" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#youtube"><img src="../img/youtube.png" style="width: 40px; margin-left: 10px;" alt=""></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex" style="background-color: #000; color: #fff; padding: 20px;">
+                        <div class="col-8 d-flex justify-content-between mx-auto">
+
+                            <!-- Cột "VỀ CHÚNG TÔI" -->
+                            <div class="col-2 mt-3">
+                                <h5 style="font-size: 16px; font-weight: bold; text-align: left;">VỀ CHÚNG TÔI</h5>
+                                <ul class="row" style="list-style-type: none; padding: 0; text-align: left;">
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Giới thiệu lịch sử Công ty</a></li>
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Chính sách bảo mật thông tin</a></li>
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Chính sách bảo hành</a></li>
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Chính sách vận chuyển & giao nhận</a></li>
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Quy định hình thức thanh toán</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Cột "TRỢ GIÚP" -->
+                            <div class="col-2 mt-3">
+                                <h5 style="font-size: 16px; font-weight: bold; text-align: left;">TRỢ GIÚP</h5>
+                                <ul class="row" style="list-style-type: none; padding: 0; text-align: left;">
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Tin tức</a></li>
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Liên hệ</a></li>
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Danh sách Đại lý</a></li>
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Quy trình xử lý khiếu nại</a></li>
+                                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Chính sách đổi trả hàng & hoàn tiền</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Cột "ĐỊA CHỈ STORE" -->
+                            <div class="col-2 mt-3">
+                                <h5 style="font-size: 16px; font-weight: bold; text-align: left;">ĐỊA CHỈ STORE</h5>
+                                <ul class="row" style="list-style-type: none; padding: 0; text-align: left;">
+                                    <li style="font-size: 14px;">12, Nguyễn Văn Bảo, P.4, Gò Vấp, TP.HCM</li>
+                                    <li style="font-size: 14px;">Tân Trung, Đạ K' Nàng, Đam Rông, Lâm Đồng</li>
+
+                                </ul>
+                            </div>
+
+                            <!-- Cột "SỐ ĐIỆN THOẠI LIÊN HỆ" -->
+                            <div class="col-2 mt-3">
+                                <h5 style="font-size: 16px; font-weight: bold; text-align: left;"></h5>
+                                <ul style="border-left: 1px solid white;" class="row" style="list-style-type: none; padding: 0; text-align: right;">
+                                    <li style="font-size: 14px;">(028) 38983424</li>
+                                    <li style="font-size: 14px;">(028) 22437005</li>
+                                    <li style="font-size: 14px;">(028) 22437008</li>
+                                    <li style="font-size: 14px;">(024) 39725014</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="col-9">
+                            <hr style="border: 1px solid white;">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center" style="background-color: #000000;">
+                        <div class="col-8 d-flex justify-content-between">
+                            <div class="col-4">
+                                <div class="txt-footer">
+                                    <p style="text-align: left;">Bản quyền ©2024 thuộc CodyStudio</p>
+                                    <p style="text-align: left;">Designer by Lê Công Chung</p>
+                                </div>
+                            </div>
+                            <div class="col-4  ml-auto">
+                                <div class="d-flex justify-content-end">
+                                    <img src="../img/image 1.png" alt="">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </footer>
+        </div>
+        <script src="../js/script_home.js"></script>
+</body>
+
+</html>

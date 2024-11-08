@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style_login.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="../bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-5.2.3-dist/js/jquery-3.6.0.min.js"></script>
+    <title>Cody Studio - Sign Up | Sign In</title>
+    <script src="../js/login.js"></script>
+    <style>
+        #dangnhap {
+            text-decoration: none;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <div id="form">
+                <h1>Tạo tài khoản</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <input type="text" placeholder="Tên Đăng nhập" id="tendn"><span id="txt1">*</span>
+                <input type="email" placeholder="Email" id="email"><span id="txt2">*</span>
+                <input type="password" placeholder="Mật khẩu" id="mk"><span id="txt3">*</span>
+                <input type="password" placeholder="Nhập lại mật khẩu" id="nhapmk"><span id="txt4">*</span>
+                <button id="dangky">Đăng Ký</button>
+            </div>
+        </div>
+        <div class="form-container sign-in">
+            <div id="form">
+                <h1>Đăng nhập</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+
+                </div>
+
+                <input type="Tên đăng nhập" placeholder="Tên đăng nhập" id="tk">
+                <input type="password" placeholder="Mật khẩu" id="lg">
+                <a href="#">Quên mật khẩu?</a>
+                <button><a href="#" id="dangnhap">Đăng nhập</a></button>
+            </div>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Xin chào bạn đã quay trở lại!</h1>
+                    <p>Nếu bạn đã có tài khoản của chúng tôi</p>
+                    <button class="hidden" id="login">Đăng nhập ngay</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Xin chào!</h1>
+                    <p>Nếu bạn chưa có tài khoản của chúng tôi</p>
+                    <button class="hidden" id="register">Đăng ký ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
+
+        registerBtn.addEventListener('click', () => {
+            container.classList.add("active");
+        });
+
+        loginBtn.addEventListener('click', () => {
+            container.classList.remove("active");
+        });
+        $(document).ready(function () {
+            $("#dangnhap").click(function (e) {
+                var tk = $("#tk").val();
+                var mk = $("#lg").val();
+                if (tk == "admin" && mk == "admin") {
+                    $('#dangnhap').attr('href', 'Admin.html');
+                }
+                else {
+                    $('#dangnhap').attr('href', 'Home.html');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

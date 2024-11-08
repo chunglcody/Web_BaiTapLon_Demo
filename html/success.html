@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody Studio - Giỏ hàng</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style_price.css">
+    
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-content">
+                <div class="logo">
+                    <a href="../html/home.html"><img src="../img/logo_black.png" style="width: 162px;" alt="Logo"></a>
+                </div>
+                <div class="txt-daichi">
+                    <h4>ĐỊA CHỈ</h4>
+                    <span>12, NGUYỄN VĂN BẢO, GÒ VẤP, TP. HỒ CHÍ MINH</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm">
+                </div>
+                <div class="giohang">
+                    <a href="../html/price.html">
+                        <img src="../img/shopping-cart.png" alt="Cart">
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <!-- Toggle button for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-12" style="margin-top: 200px;">
+            <div class="row">
+                <div class="col-9 mt-3 d-flex">
+                    <div class="success-content" style="width: 100%; background-color: white;">
+                        
+                        <div class="table-success" style="width: 100%; padding: 30px;">
+                            <h3 style="color: #0077FF; font-weight: 700; font-size: 20px;">Đặt Hàng Thành Công</h3>
+                            <div class="table-content" style="border: 1px solid black; margin-top: 20px;">
+                                <table style="width: 100%; ">
+                                    <tr>
+                                        <th>Mã đơn hàng</th>
+                                        <td id="idOrder"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Thời gian đặt hàng</th>
+                                        <td id="dateOrder"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Khách hàng</th>
+                                        <td id="nameKhachHang"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Địa chỉ</th>
+                                        <td id="addressKhachHang"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Số điện thoại</th>
+                                        <td id="phoneKhachHang"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td id="emailKhachHang"></td>
+                                    </tr>
+                                   
+                                </table>
+                                
+                            </div>
+                            <div class="btn" style="float: right; margin-top: 20px;">
+                                <a
+                                    name=""
+                                    id="btnConfirm"
+                                    class="btn btn-primary"
+                                    href="../html/confirm.html"
+                                    role="button"
+                                    >Xác nhận</a
+                                >
+                                
+                            </div>
+                           
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="row">
+                        <div class="bill">
+                            <div class="order-title">Đơn hàng</div>
+                            <div class="summary-title">(1 sản phẩm)</div>
+                            <div class="divider"></div>
+                            <div class="items">
+                                <!-- Bill items will be appended here -->
+                            </div>
+                            <div class="summary">
+                                <div class="subtotal">
+                                    <span class="label">Tạm tính</span>
+                                    <span class="amount">0 đ</span>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="total">
+                                    <span class="label">Thành tiền</span>
+                                    <span class="amount-total">0 đ</span>
+                                </div>
+                                <div class="vat-note">(Đã bao gồm VAT nếu có)</div>
+                            </div>
+                            <div class="extra-info">
+                                <img class="icon" src="https://anhduy.vn/images/delivery.png" alt="icon">
+                                <div class="free-shipping">Miễn phí vận chuyển</div>
+                            </div>
+                            <div class="extra-info">
+                                <img class="icon" src="https://anhduy.vn/images/Installation.png" alt="icon">
+                                <div class="free-installation">Miễn phí dịch vụ lắp đặt</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/success.js"></script>
+        <!-- <footer>
+            <div class="footer-content">
+                <div class="col-12 d-flex justify-content-center" style="background-color: #F68A1E;">
+
+                    <div class="col-4">
+                        <div class="mb-4">
+                            <label for="" class="form-label">Nhận thông tin khuyến mãi mới nhất</label>
+                            <div class="d-flex">
+                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nhập email của bạn" />
+                                <button type="submit" class="btn">
+                                Đăng Ký
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center" style="background-color: #000000;">
+                    <div class="col-8 d-flex justify-content-between">
+                        <div class="col-4">
+                            <div class="logo-footer">
+                                <img src="../img/logo_white.png" style="width: 40%; float: left;" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-4 mt-4 ml-auto">
+                            <ul class="d-flex justify-content-end">
+                                <li>
+                                    <a href="#facebook"><img src="../img/communication.png" style="width: 40px;" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#tiktok"><img src="../img/tik-tok.png" style="width: 40px; margin-left: 10px;" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#youtube"><img src="../img/youtube.png" style="width: 40px; margin-left: 10px;" alt=""></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex" style="background-color: #000; color: #fff; padding: 20px;">
+                    <div class="col-8 d-flex justify-content-between mx-auto">
+
+                        <!-- Cột "VỀ CHÚNG TÔI" -->
+                        <!-- <div class="col-2 mt-3">
+                            <h5 style="font-size: 16px; font-weight: bold; text-align: left;">VỀ CHÚNG TÔI</h5>
+                            <ul class="row" style="list-style-type: none; padding: 0; text-align: left;">
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Giới thiệu lịch sử Công ty</a></li>
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Chính sách bảo mật thông tin</a></li>
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Chính sách bảo hành</a></li>
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Chính sách vận chuyển & giao nhận</a></li>
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Quy định hình thức thanh toán</a></li>
+                            </ul>
+                        </div> -->
+
+                        <!-- Cột "TRỢ GIÚP" -->
+                        <!-- <div class="col-2 mt-3">
+                            <h5 style="font-size: 16px; font-weight: bold; text-align: left;">TRỢ GIÚP</h5>
+                            <ul class="row" style="list-style-type: none; padding: 0; text-align: left;">
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Tin tức</a></li>
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Liên hệ</a></li>
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Danh sách Đại lý</a></li>
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Quy trình xử lý khiếu nại</a></li>
+                                <li><a href="#" style="color: #fff; text-decoration: none; font-size: 14px;">Chính sách đổi trả hàng & hoàn tiền</a></li>
+                            </ul>
+                        </div> -->
+
+                        <!-- Cột "ĐỊA CHỈ STORE" -->
+                        <!-- <div class="col-2 mt-3">
+                            <h5 style="font-size: 16px; font-weight: bold; text-align: left;">ĐỊA CHỈ STORE</h5>
+                            <ul class="row" style="list-style-type: none; padding: 0; text-align: left;">
+                                <li style="font-size: 14px;">12, Nguyễn Văn Bảo, P.4, Gò Vấp, TP.HCM</li>
+                                <li style="font-size: 14px;">Tân Trung, Đạ K' Nàng, Đam Rông, Lâm Đồng</li>
+
+                            </ul>
+                        </div> -->
+
+                        <!-- Cột "SỐ ĐIỆN THOẠI LIÊN HỆ" -->
+                        <!-- <div class="col-2 mt-3">
+                            <h5 style="font-size: 16px; font-weight: bold; text-align: left;"></h5>
+                            <ul style="border-left: 1px solid white;" class="row" style="list-style-type: none; padding: 0; text-align: right;">
+                                <li style="font-size: 14px;">(028) 38983424</li>
+                                <li style="font-size: 14px;">(028) 22437005</li>
+                                <li style="font-size: 14px;">(028) 22437008</li>
+                                <li style="font-size: 14px;">(024) 39725014</li>
+                            </ul>
+                        </div> -->
+
+                    <!-- </div> -->
+                <!-- </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="col-9">
+                        <hr style="border: 1px solid white;">
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center" style="background-color: #000000;">
+                    <div class="col-8 d-flex justify-content-between">
+                        <div class="col-4">
+                            <div class="txt-footer">
+                                <p style="text-align: left;">Bản quyền ©2024 thuộc CodyStudio</p>
+                                <p style="text-align: left;">Designer by Lê Công Chung</p>
+                            </div>
+                        </div>
+                        <div class="col-4  ml-auto">
+                            <div class="d-flex justify-content-end">
+                                <img src="../img/image 1.png" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </footer> --> 
+    </div>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

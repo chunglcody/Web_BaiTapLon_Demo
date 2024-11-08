@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody Studio - Giỏ hàng</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style_price.css">
+    
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-content">
+                <div class="logo">
+                    <a href="../html/home.html"><img src="../img/logo_black.png" style="width: 162px;" alt="Logo"></a>
+                </div>
+                <div class="txt-daichi">
+                    <h4>ĐỊA CHỈ</h4>
+                    <span>12, NGUYỄN VĂN BẢO, GÒ VẤP, TP. HỒ CHÍ MINH</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm">
+                </div>
+                <div class="giohang">
+                    <a href="../html/price.html">
+                        <img src="../img/shopping-cart.png" alt="Cart">
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <!-- Toggle button for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-12"></div>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #434343;">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a style="background-color: white; height: 50px; display: flex; align-items: center;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                            <img src="../img/menu.png" style="width: 20px; margin-right: 10px;" alt="">
+                            <h2 style="font-size: 16px; font-weight: bold; margin-top: 10px;">DANH MỤC SẢN PHẨM</h2>
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #434343;">
+                            <li>
+                                <a class="nav-item" href="../html/loa.html"><img src="../img/speaker.png" style="width: 15px; margin-right: 5px;" alt=""> Loa</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/tainghe.html"><img src="../img/headphones.png" style="width: 15px; margin-right: 5px;" alt=""> Tai nghe</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/micro.html"><img src="../img/microphone.png" style="width: 15px; margin-right: 5px;" alt=""> Microphone</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/karaoke.html"><img src="../img/karaoke.png" style="width: 15px; margin-right: 5px;" alt=""> Thiết bị Karaoke</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/soundcard.html"><img src="../img/sound-card.png" style="width: 15px; margin-right: 5px;" alt=""> Sound Card</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="../html/jack.html"><img src="../img/audio-jack.png" style="width: 15px; margin-right: 5px;" alt=""> Dây dẫn, Phụ kiện</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <a href=""><img src="../img/JBL1.png" style="width: 90%; margin-top: 8px;" alt=""></a>
+                    <a href=""> <img src="../img/AKG.png" style="width: 90%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Shure.png" style=" margin-left: 25px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Denon.png" style=" margin-left: 25px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Sumico_1.png" style=" margin-left: 25px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Sine.png" style=" margin-left: 25px;width: 80%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/EZAcoustic (1).png" style=" margin-left: 25px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/dbx1.png" style=" margin-left: 20px;width: 70%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/musican-b.png" style=" margin-left: 25px;width: 80%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Klipsch.png" style=" margin-left: 25px;width: 80%; margin-top: 8px;" alt=""></a>
+                    <a href=""><img src="../img/Nativ.png" style=" margin-left: 25px;width: 80%; margin-top: 8px;" alt=""></a>
+
+                </ul>
+
+            </div>
+
+
+        </nav>
+        <div class="col-12" style="margin-top: 200px;">
+            <div class="row">
+                <div class="col-9 mt-3 d-flex">
+                    <div class="product-list" style="width: 100%;">
+                        <table style="width: 90%;">
+                            <thead>
+                                <tr>
+                                    <th>Hình ảnh</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="productTableBody">
+                                <!-- Products will be appended here -->
+                            </tbody>
+                        </table>
+                      
+                        <div class="btn-link" style="float: right; margin-right: 30px;">
+                            <a
+                            name=""
+                            id=""
+                            class="btn btn-success"
+                            href="../html/home.html"
+                            role="button"
+                            >Quay lại</a
+                        >
+                        
+                        <a
+                            name=""
+                            id=""
+                            class="btn btn-primary"
+                            href="../html/checkout.html"
+                            role="button"
+                            >Tiếp theo</a
+                        >
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="row">
+                        <div class="bill">
+                            <div class="order-title">Đơn hàng</div>
+                            <div class="summary-title">(1 sản phẩm)</div>
+                            <div class="divider"></div>
+                            <div class="items">
+                                <!-- Bill items will be appended here -->
+                            </div>
+                            <div class="summary">
+                                <div class="subtotal">
+                                    <span class="label">Tạm tính</span>
+                                    <span class="amount">0 đ</span>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="total">
+                                    <span class="label">Thành tiền</span>
+                                    <span class="amount-total">0 đ</span>
+                                </div>
+                                <div class="vat-note">(Đã bao gồm VAT nếu có)</div>
+                            </div>
+                            <div class="extra-info">
+                                <img class="icon" src="https://anhduy.vn/images/delivery.png" alt="icon">
+                                <div class="free-shipping">Miễn phí vận chuyển</div>
+                            </div>
+                            <div class="extra-info">
+                                <img class="icon" src="https://anhduy.vn/images/Installation.png" alt="icon">
+                                <div class="free-installation">Miễn phí dịch vụ lắp đặt</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+              
+    </div>
+    <script src="../js/price.js"></script>
+</body>
+</html>
